@@ -1,6 +1,4 @@
-open-sdk-php
-=================
-OpenApi SDK in PHP.
+
 
 # API文档
 - 官方系统说明文档(https://open.sheincorp.com/documents/system/dad0d1c7-be76-4b03-a735-4e23f012bdd9)
