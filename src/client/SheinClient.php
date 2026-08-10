@@ -79,12 +79,12 @@ class SheinClient
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array_merge(['Content-Type: application/json'], $this->formatHeaders($headers)));
 
-        echo 'POST请求地址：' . $url . PHP_EOL;
-        echo '请求header：' . json_encode($headers) . PHP_EOL;
-        echo '请求参数：' . $data . PHP_EOL;
+        //echo 'POST请求地址：' . $url . PHP_EOL;
+        //echo '请求header：' . json_encode($headers) . PHP_EOL;
+        //echo '请求参数：' . $data . PHP_EOL;
         // 执行cURL会话
         $response = curl_exec($curl);
-        echo 'response：' . $response . PHP_EOL;
+       // echo 'response：' . $response . PHP_EOL;
         curl_close($curl);
 
         return $response;
