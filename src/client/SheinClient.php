@@ -12,6 +12,12 @@ class SheinClient
     //  private $domain = "https://openapi.sheincorp.com";
     //  private $domain = "https://openapi.sheincorp.cn";
 
+    public function getDomain(){
+        return $this->domain ;
+    }
+    public function setDomain($domain){
+        $this->domain = $domain ;
+    }
     public function postByAppSign($path, $data) {
         $timestamp = TimeUtil::currentTimeMillis();
         $appid = $data->getAppid();
