@@ -1,11 +1,11 @@
 {
-  "name": "shein/open-sdk-php",
+  "name": "lwz/shein-sdk-php",
   "description": "description",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
     {
-      "name": "shein"
+      "name": "lwz"
     }
   ],
   "require": {
