@@ -39,6 +39,10 @@ class SheinClient
             "x-lt-timestamp" => $timestamp,
             "x-lt-signature" => $sign
         ];
+        $language = $data->getLanguage();
+        if (!empty($language)) {
+            $headers["language"] = $language;
+        }
         return $this->post($path, $data, $headers);
     }
 
