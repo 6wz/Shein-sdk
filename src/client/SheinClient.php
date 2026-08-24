@@ -46,6 +46,22 @@ class SheinClient
         return $this->post($path, $data, $headers);
     }
 
+    public function getByOpenKeySign($path, $data) {
+        $timestamp = TimeUtil::currentTimeMillis();
+        $openKeyId = $data->getOpenKeyId();
+        $sign = SignUtil::sign($openKeyId, $data->getSecretKey(), $path, $timestamp);
+        $headers = [
+            "x-lt-openKeyId" => $openKeyId,
+            "x-lt-timestamp" => $timestamp,
+            "x-lt-signature" => $sign
+        ];
+        $language = $data->getLanguage();
+        if (!empty($language)) {
+            $headers["language"] = $language;
+        }
+        return $this->get($path, $data, $headers);
+    }
+
     /**
      * 发起GET请求
      *
