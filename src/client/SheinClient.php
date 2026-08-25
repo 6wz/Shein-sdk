@@ -42,6 +42,7 @@ class SheinClient
         $language = $data->getLanguage();
         if (!empty($language)) {
             $headers["language"] = $language;
+            $headers["x-lt-language"] = $language;
         }
         return $this->post($path, $data, $headers);
     }
@@ -58,6 +59,7 @@ class SheinClient
         $language = $data->getLanguage();
         if (!empty($language)) {
             $headers["language"] = $language;
+            $headers["x-lt-language"] = $language;
         }
         return $this->get($path, $data, $headers);
     }
